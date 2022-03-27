@@ -1,0 +1,1 @@
+Testing Loss: 0.38053 | Testing Acc: 82.700

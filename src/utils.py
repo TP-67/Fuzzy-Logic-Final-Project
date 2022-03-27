@@ -3,6 +3,7 @@ import os
 import numpy as np
 from typing import List, Dict
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 
 from variable import *
 
@@ -151,3 +152,20 @@ def write_text(config: Dict, *text_str) -> None:
         for i in text_str:
             text_file.write(i)
             text_file.write('\n')
+
+
+def comp_linear_reg_coff(x1: np.array, x2: np.array, y1: np.array, y2: np.array) -> Tuple:
+    # Initialize Linear Regression model
+    model = LinearRegression()
+    # Fit training data
+    model.fit(np.concatenate((x1, x2), axis=1), y1)
+    m1_1 = model.coef_[0]
+    m1_2 = model.coef_[1]
+    c1 = model.intercept_
+
+    model.fit(np.concatenate((x1, x2), axis=1), y2)
+    m2_1 = model.coef_[0]
+    m2_2 = model.coef_[1]
+    c2 = model.intercept_
+
+    return m1_1, m1_2, c1, m2_1, m2_2, c2

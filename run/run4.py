@@ -45,6 +45,7 @@ alc: FuzzyVariable = FuzzyVariable('alc', 0, 1, a1, a2)
 health: FuzzyVariable = FuzzyVariable('health', 0, 1, h1, h2)
 
 # Define membership functions for Sugeno method.
+# If we have dataset, we call 'comp_linear_reg_coff' function to compute coefficients and intercepts.
 r1: SugenoFuzzyFunction = SugenoFuzzyFunction('high', {alc: 0.1, health: 0.4}, 0.5)
 r2: SugenoFuzzyFunction = SugenoFuzzyFunction('low', {alc: 0.4, health: 0.2}, 0.7)
 

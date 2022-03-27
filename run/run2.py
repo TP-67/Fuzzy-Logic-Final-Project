@@ -50,6 +50,7 @@ media: FuzzyVariable = FuzzyVariable('media', 0, 1, m1, m2)
 iq: FuzzyVariable = FuzzyVariable('iq', 0, 1, iq1, iq2, iq3)
 
 # Define membership functions for Sugeno method.
+# If we have dataset, we call 'comp_linear_reg_coff' function to compute coefficients and intercepts.
 # Pass
 
 # Define a output fuzzy variable for Sugeno method.

@@ -65,6 +65,7 @@ mountain: FuzzyVariable = FuzzyVariable('mountain', 0, 1, m1, m2)
 raining: FuzzyVariable = FuzzyVariable('raining', 0, 1, r1, r2)
 
 # Define membership functions for Sugeno method.
+# If we have dataset, we call 'comp_linear_reg_coff' function to compute coefficients and intercepts.
 # Pass
 
 # Define a output fuzzy variable for Sugeno method.
